@@ -1,0 +1,15 @@
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2023-03-05 19:02:31 IST; 48min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 84193 (apache2)
+      Tasks: 55 (limit: 9447)
+     Memory: 5.0M
+        CPU: 597ms
+     CGroup: /system.slice/apache2.service
+             ├─84193 /usr/sbin/apache2 -k start
+             ├─84194 /usr/sbin/apache2 -k start
+             └─84195 /usr/sbin/apache2 -k start
+
+Mar 05 19:02:31 Ubuntu systemd[1]: Starting The Apache HTTP Server...
+Mar 05 19:02:31 Ubuntu systemd[1]: Started The Apache HTTP Server.

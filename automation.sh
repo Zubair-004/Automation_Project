@@ -24,3 +24,13 @@ then
 else
     echo "Apache2 web server is running"
 fi
+
+sudo systemctl status apache2 > output.txt
+if grep -q "running" output.txt; then    
+echo "The Apache2 service is enabled"
+else
+sudo systemctl start apache2
+sudo systemctl enable apache2 
+echo "The Apache2 service was stopped, errored, or inactive. The service has been started."
+fi
+
