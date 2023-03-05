@@ -14,3 +14,13 @@ dpkg -s apache2 &> /dev/null
         else
             echo    "Apache2 is installed"
     fi
+
+if ! pidof apache2 > /dev/null
+then
+    echo  "Apache web server is down,trying to restart"
+    sudo /etc/init.d/apache2 restart > /dev/null
+    sleep 10
+    sudo service apache2 start
+else
+    echo "Apache2 web server is running"
+fi
