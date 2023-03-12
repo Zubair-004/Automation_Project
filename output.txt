@@ -1,12 +1,12 @@
 ● apache2.service - The Apache HTTP Server
      Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
-     Active: active (running) since Sun 2023-03-12 12:05:42 IST; 5h 52min ago
+     Active: active (running) since Sun 2023-03-12 12:05:42 IST; 10h ago
        Docs: https://httpd.apache.org/docs/2.4/
     Process: 721 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
    Main PID: 789 (apache2)
       Tasks: 55 (limit: 9445)
      Memory: 8.1M
-        CPU: 4.863s
+        CPU: 10.019s
      CGroup: /system.slice/apache2.service
              ├─789 /usr/sbin/apache2 -k start
              ├─794 /usr/sbin/apache2 -k start

@@ -57,3 +57,17 @@ fi
 
 sudo echo -e "httpd-logs\t$(date +%m%d%Y-%H%M%S)\ttar\t$(du -sh $archive_file| cut -f1)" >> "/var/www/html/inventory.html"
 
+
+SCRIPT_PATH="/root/Automation_Project/automation.sh"
+
+REPO_NAME=$(basename "$(dirname "$SCRIPT_PATH")")
+
+COMMAND="bash $SCRIPT_PATH"
+
+if [[ $(crontab -l | grep -Fx "0 0 * * * root $COMMAND" ) ]]; then
+  echo "Already scheduled the cron job."
+else
+  echo "Cron job file creation under progress..."
+  echo "0 0 * * * root $COMMAND" > /etc/cron.d/automation
+  echo "Cron job has been scheduled successfully."
+fi
